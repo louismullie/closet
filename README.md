@@ -1,6 +1,6 @@
 ### Closet
 
-.. is a Sinatra web app skeleton loaded with goodies.
+.. is a Sinatra web app skeleton loaded with goodies, inspired from [loafer](https://github.com/zeke/loafer).
 
 **Framework Tools**
 
