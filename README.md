@@ -18,7 +18,8 @@
 
 ### Installing
 
-**Install closet and dependencies**
+**Download and install dependencies**
+
 Clone the files to your computer and install gem dependencies:
 
     git clone [repo]
