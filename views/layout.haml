@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+%html(lang='en')
+  = haml :head
+  %body
+    #header
+      = haml :header
+    #main
+      = yield
+    #footer
+      = haml :footer

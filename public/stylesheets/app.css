@@ -1,0 +1,9 @@
+/* line 1, ../sass/app.sass */
+html, body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans;
+}
+
+/* line 4, ../sass/app.sass */
+body {
+  padding: 0px;
+}
