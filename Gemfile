@@ -34,15 +34,18 @@ group :test do
   gem 'rspec'
 end
 
-# Testing and deploying
+# Local testing
 group :development do
   gem 'shotgun'
   gem 'thin'
-  gem 'capistrano'
 end
 
 # Serving and scaling
 group :production do
   gem 'unicorn'
   gem 'foreman'
+end
+
+group :deployment do
+  gem 'capistrano'
 end
