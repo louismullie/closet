@@ -22,11 +22,9 @@
 
 Clone the files to your computer and install gem dependencies:
 
-    git clone [repo]
+    git clone git://github.com/louismullie/closet.git
     cd ./closet
     bundle install
-
-Where `[repo]` is in the format `git://github.com/username/repo.git`.
 
 **Setting up a database**
 
