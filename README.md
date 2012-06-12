@@ -71,6 +71,6 @@ Create repo on github, then run:
 Where `[repo]` is in the format `git://github.com/username/repo.git`.
 Edit your `config/deploy.rb` to match your server information. 
 
-**Deploying from repo***
+**Deploying from repo**
 
     cap deploy        # Deploy to remote server.
