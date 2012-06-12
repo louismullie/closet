@@ -4,29 +4,15 @@ Bundler.require
 
 module App
   
-  class Application < Sinatra::Base
-
-    # Require configuration.
-    configure { require './config.rb' }
-    
-    # Require all helpers.
-    helpers do
-      # Require all helpers.
-      Dir['./helpers/*.rb'].each do |helper|
-        eval File.read(helper)
-      end
-    end
-    
-    # Require all routes.
-    Dir['./routes/*.rb'].each do |route|
-      eval File.read(route)
-    end
-
-  end
+  require './base'
   
-  # Require all models.
-  Dir['./models/*.rb'].each do |model|
-    require model
+  class Application < Base
+    
+    configure { require_all 'config', but: 'capistrano'  }
+    helpers   { require_all 'helpers' }
+    require_all 'routes'
+    require_all 'models'
+    
   end
-  
+
 end
