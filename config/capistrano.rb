@@ -17,8 +17,8 @@ set :deploy_to, "/var/www/project"
 set :deploy_via, :remote_cache
 
 # Server information
-role :web, "louismullie.com"         
-role :app, "louismullie.com"               
+role :web, "yourserver.com"         
+role :app, "yourserver.com"               
 
 # To run bundle install on deploy.
 require 'bundler/capistrano' 
