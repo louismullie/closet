@@ -1,0 +1,3 @@
+- Put all the models inside the App module.
+- Allow compilation of several Sass files into app.sass.
+- Put back CoffeeScript helper.
