@@ -1,2 +1,1 @@
-console.log "CoffeeScript enabled."
-
+console.log "CoffeeScript is enabled!"

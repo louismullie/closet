@@ -1,0 +1,47 @@
+en:
+  #Topbar
+  
+  profile: Profile
+  settings: Settings
+  sign_in: Sign in
+  sign_out: Sign out
+  submit_question: Submit a question
+  search: Search
+  notifications: Notifications
+  
+  #Login
+  
+  login: Login
+  register: Register
+  error: Error
+  field_missing: Please fill in all required fields.
+  username_exists: A user with this username already exists.
+  email_exists: A user with this e-mail already exists.
+  name: Name
+  email: Email
+  username: Username
+  password: Password
+  password_confirmation: Confirm password
+  city: City
+  province: Province
+  country: Country
+  birth_date: Birth date
+  about_info: About you
+  day: Day
+  month: Month
+  year: Year
+  occupation: Occupation
+  will_appear: This information will appear on your profile
+  
+  #Ask
+  ask_question: Ask a question
+  ask: Ask
+  category: Category
+  subject: Subject
+  question: Question
+  language: Language
+  type: Type
+  
+  #Languages
+  en: English
+  fr: French

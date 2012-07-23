@@ -1,0 +1,38 @@
+fr:
+  #Topbar
+  
+  profile: Perfil
+  settings: Parametros
+  sign_in: Conneccion
+  sign_out: Deconneccion
+  submit_question: Submitir una pregunta
+  search: Buscar
+  notifications: Notificaciones
+  
+  #Login
+  
+  login: Conneccion
+  register: Registracion
+  error: Error
+  field_missing: 
+  username_exists: 
+  email_exists: Un compte existe déjà pour cette addresse courriel.
+  name: Nombre
+  email: Email
+  username: Nombre de usario
+  password: Mot de passe
+  password_confirmation: Confirmar
+  city: Ville
+  birth_date: Fecha de nacimiento
+  about_info: Informacion personal
+  day: Dia
+  month: Mes
+  year: Ano
+  occupation: Occupacion
+  ask: Preguntar
+  will_appear: Needs translation
+  
+  # Languages
+  
+  en: Anglais
+  fr: Français

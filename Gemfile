@@ -14,18 +14,25 @@ gem 'sass'
 # Scripts
 gem 'coffee-script'
 
+# Internationalization
+gem 'i18n'
+
+# Message passing
+gem 'json'
+
+# Markdown & code highlighting
+gem 'redcarpet'
+
 # Models
-gem 'mongo'
 gem 'bson_ext'
 gem 'mongoid'
+gem 'mongoid_fulltext'
 
 # Authentification
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
-
-# Message passing
-gem 'json'
+gem 'omniauth-openid'
 
 # *Group-specific gems* #
 
