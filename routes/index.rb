@@ -1,4 +1,4 @@
 get "/" do
-  @title = 'It works!'
+  @title = t :title
   haml :index
 end
