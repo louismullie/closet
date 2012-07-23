@@ -1,17 +1,7 @@
 en:
-  #Topbar
-  
-  profile: Profile
-  settings: Settings
-  sign_in: Sign in
-  sign_out: Sign out
-  submit_question: Submit a question
-  search: Search
-  notifications: Notifications
-  
-  #Login
-  
+  title: Closet | A Sinatra skeleton loaded with goodies.
   login: Login
+  logout: Logout
   register: Register
   error: Error
   field_missing: Please fill in all required fields.
@@ -32,15 +22,8 @@ en:
   year: Year
   occupation: Occupation
   will_appear: This information will appear on your profile
-  
-  #Ask
-  ask_question: Ask a question
-  ask: Ask
-  category: Category
-  subject: Subject
-  question: Question
-  language: Language
-  type: Type
+  welcome_message: Welcome to Closet! Thanks for logging in.
+  welcome: Welcome!
   
   #Languages
   en: English

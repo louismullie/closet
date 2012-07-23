@@ -1,16 +1,7 @@
 fr:
-  #Topbar
-  
-  profile: Profil
-  settings: Paramètres
+  title: Closet | Un squelette d'application Sinatra
   sign_in: Connection
   sign_out: Déconnection
-  submit_question: Soumettre une question
-  search: Rechercher
-  notifications: Notifications
-  
-  #Login
-  
   login: Connection
   register: Enregistrement
   error: Erreur
@@ -33,7 +24,8 @@ fr:
   occupation: Occupation
   ask: Soumettre une question
   will_appear: Cette information apparaîtra sur votre profil
-  
+  welcome: Bienvenue!
+  welcome_message: Bienvenue à Closet! Vous avez été connecté avec succès.
   # Languages
   
   en: Anglais
