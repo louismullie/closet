@@ -2,9 +2,9 @@
 %html(lang='en')
   = haml :head
   %body
-    #header
+    #header.container
       = haml :header
-    #main
+    #main.container
       = yield
-    #footer
+    #footer.container
       = haml :footer
