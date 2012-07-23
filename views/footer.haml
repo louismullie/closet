@@ -1,1 +1,13 @@
+.row
+  .span6.offset3
+    %hr
+    %a(href='/?locale=fr')
+      = t :fr
+    %span &#124;
+    %a(href='/?locale=fr')
+      = t :en
+    = if @logged_in
+      %span(style='float: right')
+        %a(href='/logout')
+          = t :logout
 = haml :scripts
