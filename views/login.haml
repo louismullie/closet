@@ -1,4 +1,22 @@
-%form(action='/auth/developer' method='post')
-  %input(type='text' name='username')
-  %input(type='text' name='password')
-  %input(type='submit' name='')
+.row
+  .span6.offset3
+    %h3
+      = translate :login
+.row
+  .span3.offset3
+    %form(action='/auth/home' method='post')
+      %label(for='username')
+        = translate :username
+      %input#username(type='text' name='username')
+      %label(for='password')
+        = translate :password
+      %input#password(type='password' name='password')
+      %input(type='submit' name='' value='#{translate :login}')
+  .span3
+    %ul
+      %li
+        %a(href='/auth/facebook') Facebook
+      %li
+        %a(href='/auth/twitter') Twitter
+      %li
+        %a(href='/auth/google') Google
