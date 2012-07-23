@@ -1,3 +1,3 @@
-def sass(template, *args)
-  super(:"../public/sass/#{template}", *args)
+def sass(template, args = {})
+  super(:"../public/sass/#{template}", args)
 end
