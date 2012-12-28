@@ -4,12 +4,12 @@ source :rubygems
 gem 'sinatra'
 
 # Database.
-gem 'json'
 gem 'mongoid'
 gem 'mongo'
 
 # Assets.
 gem 'haml'
+gem 'json'
 gem 'uglifier'
 gem 'sass'
 gem 'redcarpet'
@@ -29,6 +29,7 @@ gem 'omniauth-openid'
 
 group :development do
   gem 'shotgun'
+  gem 'thin'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
@@ -43,5 +44,7 @@ group :deployment do
 end
 
 group :testing do
+  gem 'cucumber'
+  gem 'capybara'
   gem 'rspec'
 end
