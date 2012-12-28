@@ -1,23 +1,20 @@
 def markdown(text, args = {})
-  
-  args = {
-     filter_html: false,
-     autolink: true,
-     syntax_highlighting: false
-   }.merge(args)
 
-   copy = text.dup
+  require 'redcarpet'
 
-   # This is sketchy and needs fixing.
-   if args[:syntax_highlighting]
-     file.scan(/```([a-z]+)(.*?)```/m).each do |lang, block|
-       copy.gsub!(Regexp.last_match.to_s, 
-       CodeRay.scan(block, lang.intern).div)
-     end
-   end
-   
-   type = Redcarpet::Render::HTML
-   engine = Redcarpet::Markdown.new(renderer, args)
-   engine.render(text)
-  
+  args = {filter_html: false,
+  autolink: true}.merge(args)
+
+  # This is sketchy and needs fixing.
+  copy = text.dup
+  text.scan(/```([a-z]+)(.*?)```/m).each do |lang, block|
+    copy.gsub!(Regexp.last_match.to_s,
+    CodeRay.scan(block, lang.intern).div)
+  end
+  # End of sketchiness.
+
+  type = Redcarpet::Render::HTML
+  engine = Redcarpet::Markdown.new(type, args)
+  engine.render(copy)
+
 end
