@@ -1,4 +1,31 @@
-- if @logged_in
-  = haml :welcome
+#header
+  %h1
+    = @title
+
+#login
+- if @user
+  %a{href:'/logout'} Logout
 - else
-  = haml :login
+  %a{href:'/auth/twitter'}
+    = t :login_with
+    Twitter
+  |
+  %a{href:'/auth/facebook'}
+    = t :login_with
+    Facebook
+  |
+  %a{href:'/auth/google'}
+    = t :login_with
+    Google
+
+#content
+  %hr
+  = t :it_works
+  %hr
+
+#languages
+  %a{href: '/?locale=en'}
+    = t :english
+  |
+  %a{href: '/?locale=fr'}
+    = t :french
