@@ -1,0 +1,112 @@
+// Variables
+
+$item: 320px
+$margin: 7px
+
+// Calculus
+
+$max-columns: 4
+
+$container-width: $item*$max-columns
+
+$threecolumns-max-width: $item*4 - 1
+$twocolumns-max-width: $item*3 - 1
+$onecolumn-max-width: $item*2 - 1
+
+// Global Styles
+
+html, body
+  font-family: "Helvetica Neue", Helvetica, Arial, sans
+
+*
+  vertical-align: top
+
+// Masonry content disposition
+
+#container
+  width: $container-width
+  margin: 0 auto
+
+ul
+  margin: -$margin
+  list-style-type: none
+
+  -moz-column-gap: 0
+  -webkit-column-gap: 0
+  column-gap: 0
+
+  -moz-column-count: 4
+  -webkit-column-count: 4
+  column-count: 4
+
+@media only screen and (max-width : $threecolumns-max-width), only screen and (max-device-width : $threecolumns-max-width)
+  #container
+    width: $item*3
+
+  ul
+    -moz-column-count: 3
+    -webkit-column-count: 3
+    column-count: 3
+
+@media only screen and (max-width : $twocolumns-max-width), only screen and (max-device-width : $twocolumns-max-width)
+  #container
+    width: $item*2
+
+  ul
+    -moz-column-count: 2
+    -webkit-column-count: 2
+    column-count: 2
+
+@media only screen and (max-width : $onecolumn-max-width), only screen and (max-device-width : $onecolumn-max-width)
+  #container
+    width: $item*1
+
+  ul
+    -moz-column-count: 1
+    -webkit-column-count: 1
+    column-count: 1
+
+.item
+  display: inline-block
+
+  width: $item - $margin*2
+  margin: $margin
+  padding: 0px
+
+  img.image
+    margin-top: 9px
+
+  h4
+    margin-bottom: 9px
+
+    a
+      color: #333
+
+  .card
+    padding-top: 0px
+    margin: 2px
+    
+    .card-title
+      a:hover
+        text-decoration: none
+
+    .card-footer
+      padding-top: 5px
+
+      .hashtag
+        display: inline-block
+        
+// New content
+
+#newcontent
+  display: none
+
+  margin-bottom: 30px
+  text-align: center
+
+  a.btn
+    span
+      font-weight: bold
+
+.hidden
+  display: none
