@@ -6,6 +6,10 @@ module Closet
   
   class Application < Sinatra::Base
     
+    set :environment, :production
+    
+    Bundler.require(settings.environment)
+    
     def self.require_all(dir, opts={})
       Dir["./#{dir}/*.rb"].each do |f|
         next if f.index 'deploy.rb'
@@ -17,6 +21,7 @@ module Closet
         end
       end
     end
+    
     
     # Recursively require config and helpers.
     configure { self.require_all 'config'  }
