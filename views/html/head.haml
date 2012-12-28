@@ -3,5 +3,9 @@
     = @title
   = haml :'html/meta'
   = haml :'html/html5'
-  = haml :'html/styles', :locals => { :assets => locals[:assets] }
-  = haml :'html/scripts', :locals => { :assets => locals[:assets] }
+  // Javascripts.
+  = js :vendor
+  = js :application
+  // Style sheets.
+  = css :vendor, media: 'screen'
+  = css :application, media: 'screen'
