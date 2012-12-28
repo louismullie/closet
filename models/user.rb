@@ -1,27 +1,34 @@
 class User
-  
+
   require 'date'
-  
+
   include Mongoid::Document
-  
-  has_many :questions, validate: false
-  has_many :posts, validate: false
-  has_many :comments, validate: false
-  
-  belongs_to :discussions
 
+  field :uid, type: Integer
   field :name, type: String
-  field :email, type: String
-  field :city, type: String
-  field :province, type: String
-  field :country, type: String
-  field :info, type: String
-  
-  field :birth, type: Date
+  field :nickname, type: String
+  field :token, type: String
+  field :secret, type: String
   field :joined, type: Date
-  
-  field :privileges, type: Array
-  field :flags, type: Array
 
+  def self.login(auth)
+    raise 'Authentication token was nil.' if not auth
+    user = User.where(uid: auth["uid"]).first
+    user ||= self.add(auth)
+  end
   
+  def self.add(auth)
+    info, creds = auth["info"], 
+    auth["credentials"]
+    user = User.create(
+      uid:      auth["uid"], 
+      name:     info["name"],
+      nickname: info["nickname"],
+      token:    creds["token"],
+      secret:   creds["secret"],
+      joined:   Date.today
+    )
+    user.save!; user
+  end
+
 end
