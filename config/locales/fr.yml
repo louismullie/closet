@@ -1,32 +1,7 @@
 fr:
-  title: Closet | Un squelette d'application Sinatra
-  sign_in: Connection
-  sign_out: Déconnection
-  login: Connection
-  register: Enregistrement
-  error: Erreur
-  field_missing: Veuillez saisir tous les espaces requis.
-  username_exists: Ce nom d'utilisateur est déjà prix.
-  email_exists: Un compte existe déjà pour cette addresse courriel.
-  name: Nom
-  email: Courriel
-  username: Nom d'utilisateur
-  password: Mot de passe
-  password_confirmation: Confirmez votre mot de passe
-  city: Ville
-  province: Province
-  country: Ville
-  birth_date: Année de naissance
-  about_info: À propos de vous
-  day: Jour
-  month: Mois
-  year: Année
-  occupation: Occupation
-  ask: Soumettre une question
-  will_appear: Cette information apparaîtra sur votre profil
-  welcome: Bienvenue!
-  welcome_message: Bienvenue à Closet! Vous avez été connecté avec succès.
-  # Languages
+  login_with: S'authentifier avec
+  it_works: Ça fonctionne!
   
-  en: Anglais
-  fr: Français
+  # Languages
+  english: Anglais
+  french: Français
