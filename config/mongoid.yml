@@ -1,0 +1,6 @@
+development:
+  sessions:
+    default:
+      database: closet
+      hosts:
+        - localhost:27017
