@@ -1,0 +1,7 @@
+%head
+  %title
+    = @title
+  = haml :'html/meta'
+  = haml :'html/html5'
+  = haml :'html/styles', :locals => { :assets => locals[:assets] }
+  = haml :'html/scripts', :locals => { :assets => locals[:assets] }
