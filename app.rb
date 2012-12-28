@@ -1,28 +1,33 @@
-# Require bundler.
-require 'bundler'
-# Require all gems.
-Bundler.require
-
-# Require all models.
-Dir['./models/*.rb'].each do |m|; require m; end
-
-# Our application namespace.
-module App
+module Closet
   
-  # Require the base class.
-  require './base'
-
-  # Our main Sinatra application.
-  class Application < Base
+  # Web server.
+  require 'sinatra'
+  require 'sinatra/assetpack'
+  
+  class Application < Sinatra::Base
     
-    configure { require_all 'config', but: 'capistrano'  }
-    before do
-      I18n.locale = params[:locale] || I18n.default_locale
-      @logged_in = !session[:session_id].nil?
+    def self.require_all(dir, opts={})
+      Dir["./#{dir}/*.rb"].each do |f|
+        next if f.index 'deploy.rb'
+        begin
+          eval File.read f
+        rescue Exception => e
+          msg = e.message + " in #{f}."
+          raise e.class.new(msg)
+        end
+      end
     end
-    helpers   { require_all 'helpers' }
-    require_all 'routes'
-  
+    
+    # Recursively require config and helpers.
+    configure { self.require_all 'config'  }
+    helpers   { self.require_all 'helpers' }
+    
+    # Require all available routes.
+    self.require_all 'routes'
+    
+    # Require all database models.
+    Dir["./models/*.rb"].each { |model| require model }
+    
   end
   
 end
