@@ -2,10 +2,6 @@ source :rubygems
 
 # Server.
 gem 'sinatra'
-gem 'sinatra-assetpack'
-gem 'unicorn'
-gem 'capistrano'
-gem 'i18n'
 
 # Database.
 gem 'json'
@@ -17,7 +13,8 @@ gem 'haml'
 gem 'uglifier'
 gem 'sass'
 gem 'redcarpet'
-gem 'coffee-script'
+gem 'sinatra-assetpack'
+gem 'i18n'
 
 # Omniauth.
 gem 'omniauth'
@@ -29,21 +26,22 @@ gem 'oa-openid'
 gem 'htmltokenizer'
 gem 'ruby-hmac'
 gem 'omniauth-openid'
-gem 'tweetstream'
 
-# Local testing
 group :development do
   gem 'shotgun'
-  gem 'thin'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
-# For ROFLscaling only
 group :production do
   gem 'unicorn'
   gem 'foreman'
 end
 
-# For deployment.
 group :deployment do
   gem 'capistrano'
+end
+
+group :testing do
+  gem 'rspec'
 end
