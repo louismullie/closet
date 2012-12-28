@@ -52,7 +52,7 @@ Getting Omniauth to work on a local machine is a bit tricky to do. Here is a sam
 - Site URL: `http://localhost:5000`
 
 [Google API](https://code.google.com/apis/console/)
-- Home page URL: 127.0.0.1
+- Home page URL: `127.0.0.1`
 
 If there's a better way, please let me know.
 
@@ -60,11 +60,11 @@ If there's a better way, please let me know.
 
 **Localizing Static Fields**
 
-Setup your static fields in config/locales/, following the examples provided. In your HAML template, use `translate :name` (or the short form `t :name`) to automatically insert the appropriate translation based on the user locale.
+Setup your static fields in `config/locales/`, following the examples provided. In your HAML template, use `translate :name` (or the short form `t :name`) to automatically insert the appropriate translation based on the user locale.
 
 **Dynamic Fields**
 
-To make the Mongoid field X localizable, add `localize: true` to the X's options in the model file. In the database, create a second field named `X_translations`, replacing `X` by the name of the field. Inside `X_translations`, insert a hash with the text to use for each locale, e.g. `{en: 'hello', fr: 'bonjour'}`.
+To make the Mongoid field X localizable, add `localize: true` to X's options in the model file. In the database, create a second field named `X_translations`, replacing `X` by the name of the field. This `X_translations` field should be a hash with the text to use for each locale, e.g. `{en: 'hello', fr: 'bonjour'}`.
 
 ### Testing
 
