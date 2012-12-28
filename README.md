@@ -14,9 +14,13 @@ Is a barebones Sinatra application, loaded with the following goodies:
 - Spec testing with `rspec` and integration testing with `capybara`.
 - Direct deployment from a git repository using `capistrano`.
 
+Why should you use Closet? Because each of its components have been carefully chosen and integrated to yield a skeleton that just works (tm), right out of the box.
+
+***
+
 ![Closet](https://raw.github.com/louismullie/closet/master/app.png)
 
-Why should you use Closet? Because each of its components have been carefully chosen and integrated to yield a skeleton that just works (tm), right out of the box.
+***
 
 ### Installing
 
