@@ -1,31 +1,34 @@
 source :rubygems
 
-# Server.
 gem 'sinatra'
 
-# Database.
-gem 'mongoid'
-gem 'mongo'
+group :database do
+  gem 'mongoid'
+  gem 'mongo'
+end
 
-# Assets.
-gem 'haml'
-gem 'json'
-gem 'uglifier'
-gem 'sass'
-gem 'redcarpet'
-gem 'sinatra-assetpack'
-gem 'i18n'
+group :assets do
+  gem 'sinatra-assetpack'
+  gem 'haml'
+  gem 'json'
+  gem 'uglifier'
+  gem 'sass'
+  gem 'redcarpet'
+  gem 'coderay'
+  gem 'i18n'
+end
 
-# Omniauth.
-gem 'omniauth'
-gem 'openid'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'omniauth-google'
-gem 'oa-openid'
-gem 'htmltokenizer'
-gem 'ruby-hmac'
-gem 'omniauth-openid'
+group :omniauth do
+  gem 'omniauth'
+  gem 'openid'
+  gem 'omniauth-twitter'
+  gem 'omniauth-facebook'
+  gem 'omniauth-google'
+  gem 'oa-openid'
+  gem 'htmltokenizer'
+  gem 'ruby-hmac'
+  gem 'omniauth-openid'
+end
 
 group :development do
   gem 'shotgun'
