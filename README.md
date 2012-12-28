@@ -2,16 +2,17 @@
 
 Is a basic Sinatra application, loaded with the following goodies:
 
-- HAML for layouts, SASS for styling, Skeleton for base CSS.
+- Layouts using `haml`, styling with `sass` and Skeleton for base CSS.
 - Out-of-the-box Omniauth authentication (Facebook, Twitter, Google).
-- MongoDB integration with a default Mongoid model to store users.
-- Localization of both plain text and database fields with I18N.
+- MongoDB integration with `mongoid` and a default User model.
+- Localization of both plain text and database fields with `i18n`.
 - Asset compilation using `sinatra-assetpack` and `uglifier`.
 - Automatic code reloading with `shotgun` + `thin` for development.
-- Load balancing with `foreman` + `unicorn` for production/scaling.
-- Better errors support when running in development mode.
-- Markdown support with CodeRay syntax highlighting.
-- Testing with Capybara/RSpec and deployment with Capistrano.
+- Load balancing with `foreman` + `unicorn` for app serving and scaling.
+- Support for `better_errors` when running in development mode.
+- Support for Markdown using `redcarpet` and highlighting with `coderay`.
+- Spec testing with `rspec` and integration testing with `capybara`.
+- Direct deployment from a git repository using `capistrano`.
 
 ### Installing
 
