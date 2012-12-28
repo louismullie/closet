@@ -1,27 +1,17 @@
 ## Closet
 
-.. is a Sinatra web app skeleton loaded with goodies, inspired from [loafer](https://github.com/zeke/loafer).
+Is a basic Sinatra application, loaded with the following goodies:
 
-**Framework Tools**
-
-- Models: Mongo + Mongoid + FullText
-- Views: Haml + Sass + Bootstrap
-- Scripts: CoffeeScript + jQuery
-- Statics: Markdown (Redcarpet)
-
-**Development Tools**
-
-- Development: Shotgun + Thin
-- Testing: RSpec + Travis
-- Deployment: Capistrano
-- Serving: Foreman + Unicorn
-
-**Website Utilities**
-
-- Authentification: Omniauth.
-- Localization: I18N.
-- Message passing: JSON.
-- Syntax highlighting: CodeRay.
+- HAML for layouts, SASS for styling, Skeleton for base CSS.
+- Out-of-the-box Omniauth authentication (Facebook, Twitter, Google).
+- MongoDB integration with a default Mongoid model to store users.
+- Localization of both plain text and database fields with I18N.
+- Asset compilation using `sinatra-assetpack` and `uglifier`.
+- Automatic code reloading with `shotgun` + `thin` for development.
+- Load balancing with `foreman` + `unicorn` for production/scaling.
+- Better errors support when running in development mode.
+- Markdown support with CodeRay syntax highlighting.
+- Testing with Capybara/RSpec and deployment with Capistrano.
 
 ### Installing
 
