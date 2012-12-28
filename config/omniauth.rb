@@ -1,10 +1,16 @@
 use Rack::Session::Cookie
 
-use OmniAuth::Builder do
-  provider :facebook, 'key', 'secret'
-  provider :twitter, 'key', 'secret'
-end
+require 'omniauth'
+require 'openid/store/filesystem'
+require 'openid/consumer/responses'
+require 'omniauth-openid'
+require 'omniauth-twitter'
+require 'omniauth-facebook'
+require 'omniauth-google'
 
-use OmniAuth::Strategies::Developer
-use OmniAuth::Strategies::Twitter
-use OmniAuth::Strategies::Facebook
+use OmniAuth::Builder do
+  provider :twitter, 'Am0ebVxHZY7GIDZ2MecXg', 'bRgssjs9rXHiDwHkSFYknqMsjurlrqTGbHnh1STsw'
+  provider :open_id, store: OpenID::Store::Filesystem.new('/tmp')
+  provider :facebook, '320120198093309', '5e790cd30b679a8122d4543dd6e33fa0'
+  provider :google, '508447679977.apps.googleusercontent.com', 'LBjgWMObS0pzh0ntehw6YyPk'
+end
