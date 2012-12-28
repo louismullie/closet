@@ -1,5 +1,6 @@
 use Rack::Session::Cookie
 
+# These files MUST be required in order.
 require 'omniauth'
 require 'openid/store/filesystem'
 require 'openid/consumer/responses'
