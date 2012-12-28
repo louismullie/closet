@@ -36,7 +36,7 @@ You may add the `-p XXX` option to specify the port on which to serve the app.
 
 ### Testing
 
-**Testing with RSpec**
+**Spec Testing with RSpec**
 
 You can run all spec tests or just one file:
 
@@ -44,10 +44,18 @@ You can run all spec tests or just one file:
     rake spec name    # Run one spec test file.
 
 Tests will run in random order. Configuration options can be changed in the `.rspec` file (in the root directory).
-  
+
+**Integration Testing with Capybara**
+
+The integration tests can be run as follows:
+
+    cucumber
+
+The feature definitions are found in `/features`.
+
 **Using Travis CI**
 
-To use Travis for automated testing, go to the Admin section of your repository, and turn on Travis in the "Service Hooks" tab. Configuration options can be changed in the `travis.yml` file (in the root directory).
+To use Travis for automated testing, go to the Travis website, and turn on Travis in the "Accounts" tab. Configuration options can be changed in the `.travis.yml` file (in the root directory).
 
 ### Deploying
 
@@ -55,10 +63,6 @@ Using Capistrano, you can deploy your app right from your public or private GitH
 Edit your `config/deploy.rb` file to match your server and repository information. Then, run:
 
     cap deploy        # Deploy to remote server.
-
-### Static pages
-
-Static pages can be put in the `/content` directory and will be parsed with Markdown. Fenced code blocks will be parsed and highlighted with Coderay.
 
 ### Localization
 
@@ -70,6 +74,6 @@ To make a Mongoid field localizable, add `localize: true` to the field options i
 
 Setup your static fields in config/locales/, following the examples provided. In your HAML template, use `translate :name` (or the short form `t :name`) to automatically insert the appropriate translation based on the user locale.
 
-### Authentification
+### Authentication
 
-Closet comes with out-of-the-box user registration and login. To use Twitter, Facebook and/or Google within your application, register your app with the relevant service and enter your app keys in the `config/omniauth.rb` file.
+Closet comes with out-of-the-box user login and registration using Omniauth. To use Twitter, Facebook and/or Google within your application, register your app with the relevant service and enter your app keys in the `config/omniauth.rb` file. Sample keys are provided for you to test your setup.
