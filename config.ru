@@ -1,5 +1,8 @@
+require 'bundler/setup'
+require 'sinatra/base'
+
 require './app'
 
 use Rack::ShowExceptions
 
-run App::Application.new
+run Closet::Application.new
