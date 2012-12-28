@@ -1,10 +1,6 @@
 <!DOCTYPE HTML>
-%html(lang='en')
-  = haml :head
+%html{lang: I18n.locale}
+  = haml :'html/head', locals: { assets: locals[:assets] }
   %body
-    #header.container
-      = haml :header
-    #main.container
+    #page.container
       = yield
-    #footer.container
-      = haml :footer
