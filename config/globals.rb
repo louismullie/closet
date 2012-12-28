@@ -1,6 +1,11 @@
-# Global variables.
+# Runs before everything.
 before do
-  @title = 'Closet'
-  @user = session[:user]
-  I18n.locale = params[:locale] || I18n.default_locale
+  # Setup global shortcuts.
+  @title  = 'Closet'
+  @user   = session[:user]
+
+  # Setup I18N locale.
+  locale  = params[:locale]
+  default = I18n.default_locale
+  I18n.locale = locale || default
 end
