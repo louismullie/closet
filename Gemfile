@@ -1,45 +1,35 @@
 source :rubygems
 
-# *Base framework* #
-
-# Routes
+# Server.
 gem 'sinatra'
-
-# Views
-gem 'haml'
-
-# Stylesheets
-gem 'sass'
-
-# Scripts
-gem 'coffee-script'
-
-# Internationalization
+gem 'sinatra-assetpack'
+gem 'unicorn'
+gem 'capistrano'
 gem 'i18n'
 
-# Message passing
+# Database.
 gem 'json'
-
-# Markdown & code highlighting
-gem 'redcarpet'
-
-# Models
-gem 'bson_ext'
 gem 'mongoid'
-gem 'mongoid_fulltext'
+gem 'mongo'
 
-# Authentification
+# Assets.
+gem 'haml'
+gem 'uglifier'
+gem 'sass'
+gem 'redcarpet'
+gem 'coffee-script'
+
+# Omniauth.
 gem 'omniauth'
-gem 'omniauth-facebook'
+gem 'openid'
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-google'
+gem 'oa-openid'
+gem 'htmltokenizer'
+gem 'ruby-hmac'
 gem 'omniauth-openid'
-
-# *Group-specific gems* #
-
-# Spec testing
-group :test do
-  gem 'rspec'
-end
+gem 'tweetstream'
 
 # Local testing
 group :development do
@@ -47,12 +37,13 @@ group :development do
   gem 'thin'
 end
 
-# Serving and scaling
+# For ROFLscaling only
 group :production do
   gem 'unicorn'
   gem 'foreman'
 end
 
+# For deployment.
 group :deployment do
   gem 'capistrano'
 end
